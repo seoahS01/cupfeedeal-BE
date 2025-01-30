@@ -83,8 +83,8 @@ public class AuthController {
     @GetMapping("/callback/backend")
     public CommonResponse<?> callbackBackend(@RequestParam("code") String code) throws IOException {
 
-//        String redirectUri = "https://api.cupfeedeal.xyz/api/v1/auth/callback/backend";
-        String redirectUri = "http://localhost:8080/api/v1/auth/callback/backend";
+        String redirectUri = "https://api.cupfeedeal.xyz/api/v1/auth/callback/backend";
+//        String redirectUri = "http://localhost:8080/api/v1/auth/callback/backend";
 
         String accessToken = kakaoService.getAccessTokenFromKakao(code, redirectUri);
 
